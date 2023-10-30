@@ -25,7 +25,7 @@ def replaceDigits(n, digits, replacement):
     n_str = str(n)
     """ iterate over the stringified digits to be replaced. """
     for digit in digits:
-        """ replace the digit with the given. """
+        """ replace the digit with the given replacement. """
         n_str = n_str[:digit] + replacement + n_str[digit + 1:]
     return int(n_str)
 
