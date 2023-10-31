@@ -1,5 +1,5 @@
 """ calculates the smallest prime which, by replacing part of the number (not necessarily adjacent digits) with the 
-same digit, is part of an 'n' prime value family. """ 
+same digit, is part of an 'n' prime value family. """
 import numpy as np
 from math import isqrt
 from itertools import combinations
