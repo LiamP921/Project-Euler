@@ -45,7 +45,8 @@ def findSmallestPrimeFamily(family_size, n, primes):
             else:
                 digit_count[prime_str[i]] = [i]
 
-        """ iterates over the digits and their positions in 'digit_count'. """
+        """ iterates over the digits and their positions in 'digit_count'; '.items()' 
+        returns a view object that displays a list of dictionary's (key, value) tuple pairs. """
         for digit, indices in digit_count.items():
             """ if there are at least two instances of the digit in the prime """
             if len(indices) >= 2:
