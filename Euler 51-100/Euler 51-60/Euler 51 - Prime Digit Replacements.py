@@ -50,7 +50,8 @@ def findSmallestPrimeFamily(family_size, n, primes):
         for digit, indices in digit_count.items():
             """ if there are at least two instances of the digit in the prime """
             if len(indices) >= 2:
-                """ generates combinations of indices of the digit to be replaced. """
+                """ generates combinations of indices of the digit to be replaced; 'combinations(iterable, r)' returns the 
+                length subsequences of elements from the input iterable. """
                 for combo_length in range(1, len(indices) + 1):
                     for combo in combinations(indices, combo_length):
                         """ counts the number of prime replacements and tracks the smallest prime in the family """
