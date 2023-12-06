@@ -54,11 +54,12 @@ def findSmallestPrimeFamily(family_size, n, primes):
                 length subsequences of elements from the input iterable. """
                 for combo_length in range(1, len(indices) + 1):
                     for combo in combinations(indices, combo_length):
-                        """ counts the number of prime replacements and tracks the smallest prime in the family """
+                        """ counts the number of prime replacements and tracks the smallest prime in the family. """
                         count = 0
                         smallest_prime = prime
                         for replacement in '0123456789':
-                            """ skip the replacement if it would result in a number with '0' as its leading digit """
+                            """ skip the replacement if it would result in a number with '0' as its leading digit; 'continued skips the remaining statements
+                            in the current loop and starts the next iteration. """
                             if replacement == '0' and combo[0] == 0:
                                 continue
                             """ replace the selected digit combination and check if the resulting number is in 'prime_set'. """
