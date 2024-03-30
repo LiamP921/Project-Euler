@@ -1,8 +1,9 @@
-""" calculates the sum of all positive integers which can't be written as the sum of two abundant numbers (whose proper divisor sum is > than said number). """
+""" calculates the sum of all positive integers which can't be written as the sum of two abundant numbers 
+(whose proper divisor sum is > than said number). """
 from math import ceil
 
 def sumDivisors(n):
-    if n == 1: 
+    if n == 1:
       return 0
     sum_div = 1
     """ 'ceil' returns smallest integer >= 'x'.  """
@@ -13,7 +14,8 @@ def sumDivisors(n):
             sum_div += (i + n // i)
     return sum_div + (sqrt if sqrt ** 2 == n else 0) 
 
-""" 'set' utilised to separate amicable sums by holding multiple elements; unlike arrays, element order is undefined, allowing for faster presence checking. """
+""" 'set' utilised to separate amicable sums by holding multiple elements; unlike arrays, element order is undefined, 
+allowing for faster presence checking. """
 abundants = set()
 non_abundants_sum = 0
 """ all integers > 28123 can be written as the sum of two abundants. """
