@@ -1,2 +1,2 @@
 # Project-Euler
-Solutions for all of my currently completed Project Euler problems!
+Solutions for the first 100 Project Euler problems!
