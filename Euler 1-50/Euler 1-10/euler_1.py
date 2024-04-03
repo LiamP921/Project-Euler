@@ -13,4 +13,5 @@ def multiples_of_3_or_5(num):
         """ subtracted as _sum_divisible_by(15) was previously found via 3 and 5. """
     return _sum_divisible_by(3) + _sum_divisible_by(5) - _sum_divisible_by(15)
 
-print(multiples_of_3_or_5(1000))
+if __name__ == "__main__":
+    print(multiples_of_3_or_5(1000))
