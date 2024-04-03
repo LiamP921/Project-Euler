@@ -10,7 +10,7 @@ def multiples_of_3_or_5(num):
   def _sum_divisible_by(n):
       p = number // n
       return n * (p * (p + 1)) // 2
-      """ subtracted as 'sumDivisibleBy(15)' was previously found via '3' and '5'. """
+      """ subtracted as _sum_divisible_by(15) was previously found via 3 and 5. """
   return _sum_divisible_by(3) + _sum_divisible_by(5) - _sum_divisible_by(15)
 
 print(multiples_of_3_or_5(1000))
