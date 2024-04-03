@@ -114,4 +114,5 @@ def largest_palindrome(n_digits):
         else:
             first_factor_digits -= 1
 
-print(largest_palindrome(3))
+if __name__ == "__main__":
+    print(largest_palindrome(3))
