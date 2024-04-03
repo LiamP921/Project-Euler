@@ -19,4 +19,5 @@ def even_fibonacci_sum(n):
         f1, f2 = f2, f1 + f2
     return s   
 
-print(even_fibonacci_sum(4_000_000))
+if __name__ == "__main__":
+    print(even_fibonacci_sum(4_000_000))
