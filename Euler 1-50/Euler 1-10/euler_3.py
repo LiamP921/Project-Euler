@@ -27,4 +27,5 @@ def largest_prime_factor(n):
     """
     return n
 
-print(largest_prime_factor(600_851_475_143))
+if __name__ == "__main__":
+    print(largest_prime_factor(600_851_475_143))
