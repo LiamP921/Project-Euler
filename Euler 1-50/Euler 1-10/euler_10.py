@@ -6,4 +6,4 @@ Find the sum of primes < n.
 """
 
 if __name__ == "__main__":
-    print(sum(eratosthenes(2_000_000))) # see eratosthenes.py
+    print(sum(eratosthenes(2_000_000))) # see Python-Recreational-Mathematics/primality/sieves/eratosthenes.py
