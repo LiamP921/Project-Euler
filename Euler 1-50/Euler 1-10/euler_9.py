@@ -25,8 +25,7 @@ def special_pythagorean_triplets(sum_value):
                 """ Euclid's Formula: any Pythagorean triplet can be represented as: 
                 a = m^2 - n^2, b = 2mn, c = m^2 + n^2, where m > n. These are both
                 coprime positive integers (i.e have no common factors other than 1). """
-                if (sum_value // (2 * m)) % k == 0 and _greatest_common_divisor(k, m) == 1: 
-                  # see problem 5
+                if (sum_value // (2 * m)) % k == 0 and _greatest_common_divisor(k, m) == 1: # see Euler 1-50/Euler 1-10/euler_5.py
                     divisor = sum_value // 2 // (k * m)
                     n = k - m
                     a = divisor * (m ** 2 - n ** 2)
