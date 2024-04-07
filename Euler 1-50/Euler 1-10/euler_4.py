@@ -64,8 +64,10 @@ def _modular_inverse(x, modulus_power_of_10):
 
 def largest_palindrome(n_digits):
     first_factor_digits = n_digits // 2
-
-    while True:
+    found_palindrome = False
+    done = False
+  
+    while not done:
         """
         iterate downwards from the largest possible factor.
         """
@@ -74,45 +76,37 @@ def largest_palindrome(n_digits):
         min_second_factor = 10 ** n_digits - 10 ** (n_digits - first_factor_digits) + 1
         if 2 * first_factor_digits == n_digits:
             largest_palindrome = max_first_factor * min_second_factor
-            factors = (max_first_factor, min_second_factor)
-            assert _is_palindrome(largest_palindrome)
         else:
             largest_palindrome = min_second_factor * min_second_factor
-            factors = None
-        modulo = 10 ** first_factor_digits
         """
-        step size and modulo 11 ensures x is relatively prime to 10, 
+        step size of 22 and modulo 11 ensures x is relatively prime to 10, 
         which is necessary to apply Hensel's lemma.
         """
-        for x in range(max_first_factor_mod_11, 1, -22):
+        modulo = 10 ** first_factor_digits
+  
+        x = max_first_factor_mod_11
+        while x > 1 and not found_palindrome:
             if x * max_first_factor < largest_palindrome:
-                break
-            """
-            if p is a palindrome modulo m, the modular_inverse also is. This 
-            optimises the search for factor pairs, as it allows one factor to be 
-            found by reversing the digits another factor modulo some modulus, 
-            removing the need to consider all possible pairs.
-            """
-            reverse_second_factor = _modular_inverse(x, modulo)
-            if reverse_second_factor is None:
-                continue
-            max_second_factor = max_first_factor + 1 - reverse_second_factor
-            """
-            iterate through possible palindrome candidates from max_second_factor * 
-            x, decrementing by x * modulo until it reaches the current largest 
-            palindrome. if the current candidate is a palindrome > than the current 
-            largest palindrome, update the largest palindrome and factors.
-            """
-            for p in range(max_second_factor * x, largest_palindrome, -x * modulo):
-                if _is_palindrome(p) and p > largest_palindrome:
-                    largest_palindrome = p
-                    second_factor = p // x
-                    factors = (x, second_factor)
-                  
-        if factors:
-            return largest_palindrome, factors
-        else:
-            first_factor_digits -= 1
+                found_palindrome = True
+            else:
+                """
+                if p is a palindrome modulo m, the modular_inverse also is. This 
+                optimises the search for factor pairs, as it allows one factor to be 
+                found by reversing the digits another factor modulo some modulus, 
+                removing the need to consider all possible pairs.
+                """
+                reverse_second_factor = _modular_inverse(x, modulo)
+                if reverse_second_factor is not None:
+                    max_second_factor = max_first_factor + 1 - reverse_second_factor
+                    p = max_second_factor * x
+      
+                    while p > largest_palindrome:
+                        if _is_palindrome(p) and p > largest_palindrome:
+                            largest_palindrome = p
+                        p -= x * modulo
+            x -= 22
+        done = True
+    return largest_palindrome
 
 if __name__ == "__main__":
-    print(largest_palindrome(3))
+  print(largest_palindrome(3))
