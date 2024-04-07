@@ -15,7 +15,7 @@ Find the value of the first to have > n divisors.
 
 import math
 
-def divisor_count(n, memo={}):
+def _divisor_count(n, memo={}):
     """ memoisation caches function results to avoid repeated calls that process 
     the same input. """
     if n in memo:
@@ -39,9 +39,9 @@ def highly_divisible_triangle(num):
         if n % 2 == 0:
             """ divisor_count is multiplicative, so if m and n are coprime, 
             σ(mn) = σ(m) ⋅ σ(n) """
-            divisors_n = divisor_count(n // 2) * divisor_count(n + 1)
+            divisors_n = _divisor_count(n // 2) * _divisor_count(n + 1)
         else:
-            divisors_n = divisor_count(n) * divisor_count((n + 1) // 2)
+            divisors_n = _divisor_count(n) * _divisor_count((n + 1) // 2)
         if divisors_n > num:
             """ nth triangle number. """
             return n * (n + 1) // 2
