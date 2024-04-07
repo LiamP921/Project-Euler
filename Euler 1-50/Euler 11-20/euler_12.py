@@ -22,9 +22,10 @@ def _divisor_count(n, memo={}):
         return memo[n]
     count = 0
     sqrt_n = math.isqrt(n)
+    """  no prime factors of a number are > its square root """
     for i in range(1, sqrt_n + 1):
-        """ no prime factors of a number are > its square root, and factors are paired 
-        such that each factor i of a number num has a complementary factor num/i. """
+       """ and factors are paired such that each factor i of a number num has a complementary 
+       factor num/i. """
         if n % i == 0:
             count += 2
     """ n is a perfect square, so ensure its sqrt is only stored once. """
