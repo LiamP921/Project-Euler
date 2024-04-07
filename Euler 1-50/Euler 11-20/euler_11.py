@@ -21,15 +21,14 @@ def horizontal_product(grid, n):
     total_prods = x - n + 1
     biggest = 0
     for i in range(y):
-        """ for each row, it slide an n-sized window across it to find all possible 
+        """ for each row, slide an n-sized window across it to find all possible 
         horizontal sequences. """
         for j in range(total_prods):
             adj = grid[i, j:n + j]
-            """ lambda functions can have any number of arguments but only one expression,
+            """ lambda functions can have any number of arguments, but only one expression,
             which is evaluated and returned. functools.reduce() returns an aggregated 
-            value from the application of a function to an iterable. This function is applied 
-            to the first pair of items, and the result is then used with the next item; this 
-            repeats through item n. """
+            value from applying a function to an iterable. This is done to the first pair of items, 
+            and the result is then used with the next item; this repeats through item n. """
             prod = functools.reduce(lambda x, y: x * y, adj)
             if prod > biggest:
                 biggest = prod
