@@ -1,7 +1,7 @@
 """
 Large Sum
 -----------
-Give the first n digits of the sum of m numbers.
+Give the first n digits of the sum of the given numbers.
 """
 
 def large_sum(numbers, n):
