@@ -1,11 +1,11 @@
 """
 Lattice Paths
 ----------------
-Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, 
-there are exactly 6 routes to the bottom right.
+Starting in the top left corner of a 2×2 grid, and only being able to move to the right 
+and down, there are exactly 6 routes to the bottom right.
 Calculate how many such routes there are in an n * n grid.
 
-1). Each lattice path corresponds to a unique combination of moving right right (x) and up (y). The number 
+1). Each lattice path corresponds to a unique combination of moving right (x) and up (y). The number 
 of lattice paths to reach a point (x,y) is the coefficient of x^x or y^y in the expansion of (x + y)^x+y, 
 which is equivalent to (x + y)^2x or (x + y)^2y.
 
