@@ -46,7 +46,8 @@ def left_to_right_diagonal(grid):
         diag_k = np.diag(grid, k =- y + 1 + i)
         if len(diag_k) < nx:
             """ np.pad adds a specified value around the array axis to achieve a 
-            desired length. """
+            desired length. This is used to make all the diagonals the 
+            same length. """
             diag_k = np.pad(diag_k, (0, nx - len(diag_k) % nx))
         d_grid[i,] = diag_k
     """ grid representation of diagonal grid. """
