@@ -12,7 +12,7 @@ def sundays_count(start_year, end_year):
     """ adaptation of Zeller's Congruence to find the day on which January 1st fell in 
     the given start year. This considers leap years and the number of years that have passed since 
     1 AD. """
-    start_day_code = (start_year + (start_year - 1) // 4 - (start_year - 1) // 100 + (start_year - 1) // 400) % 7 # % 7 ensures a day corresponds with a 7 day week
+    start_day_code = (start_year + (start_year - 1) // 4 - (start_year - 1) // 100 + (start_year - 1) // 400) % 7 # ensures a day 0-6
     """ number of days per month on a non-leap year. """
     months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     sunday_count = 0
