@@ -15,7 +15,7 @@ Find the value of the first to have > n divisors.
 
 import math
 
-def _divisor_count(n, memo={}):
+def _divisor_count(n):
     """ memoisation caches function results to avoid repeated calls that process 
     the same input. """
     if n in memo:
@@ -24,8 +24,8 @@ def _divisor_count(n, memo={}):
     sqrt_n = math.isqrt(n)
     """  no prime factors of a number are > its square root """
     for i in range(1, sqrt_n + 1):
-       """ and factors are paired such that each factor i of a number num has a complementary 
-       factor num/i. """
+        """ and factors are paired such that each factor i of a number num has a complementary 
+        factor num/i. """
         if n % i == 0:
             count += 2
     """ n is a perfect square, so ensure its sqrt is only stored once. """
@@ -49,4 +49,5 @@ def highly_divisible_triangle(num):
         n += 1
 
 if __name__ == "__main__":
+    memo = {}
     print(highly_divisible_triangle(500))
