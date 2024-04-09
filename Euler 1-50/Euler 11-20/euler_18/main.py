@@ -22,7 +22,7 @@ def maximum_path_sum():
             """ add the maximum of these two numbers to the current number in the row, 
             effectively replacing it w/ the sum. """
             triangle[row][col] += max(triangle[row + 1][col], triangle[row + 1][col + 1])
-    """ when it reaches the top, return the single number in that row, 
+    """ upon reaching the top, return the single number in that row, 
     representing the maximum path sum. """
     return triangle[0][0]
 
