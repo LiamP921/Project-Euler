@@ -17,14 +17,14 @@ via 2a! / (a! * (2a - a)!). This represents the number of ways to choose a items
 (movements) from a total set of 2a.
 """
 
-def factorial(n):
+def _factorial(n):
     fac = 1
     for i in range(2, n + 1):
         fac *= i
     return fac
 
 def count_lattice_paths(n):
-    return factorial(n * 2) // factorial(n) ** 2
+    return _factorial(n * 2) // _factorial(n) ** 2
 
 if __name__ == "__main__":
     print(count_lattice_paths(20))
