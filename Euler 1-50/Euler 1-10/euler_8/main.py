@@ -1,3 +1,11 @@
+"""
+Largest Product in a Series
+------------------------------
+The four adjacent digits with the greatest product in the given 1000-digit number
+are 9 × 9 × 8 × 9 = 5832.
+Find the value of the n adjacent digits with the greatest product.
+"""
+
 import math
 
 def largest_series_product(n):
