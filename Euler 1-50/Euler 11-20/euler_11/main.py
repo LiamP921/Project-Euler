@@ -3,7 +3,7 @@ Largest Product in a Grid
 ---------------------------
 In the given 20×20 grid, the diagonal 26, 63, 78, 14 has a product of 1788696.
 Calculate the greatest product of n adjacent numbers in the same direction 
-(up, down, left, right, or diagonally) in a grid.
+(up, down, left, right, or diagonally) in the given grid.
 """
 
 import numpy as np
