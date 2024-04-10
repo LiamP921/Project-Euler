@@ -19,7 +19,7 @@ def maximum_path_sum():
     """ for each number, find the two numbers in the row below that are both directly 
     below and adjacent. """
         for col in range(len(triangle[row])):
-            """ add the maximum of these two numbers to the current number in the row, 
+            """ add the maximum of these to the current number in the row, 
             effectively replacing it w/ the sum. """
             triangle[row][col] += max(triangle[row + 1][col], triangle[row + 1][col + 1])
     """ upon reaching the top, return the single number in that row, 
