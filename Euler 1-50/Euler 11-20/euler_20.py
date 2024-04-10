@@ -8,14 +8,33 @@ Find the sum of the digits n!
 
 import math
 
-def sum_digits_factorial(n):
-    """ combine length lemma from problem #16 with Stirling's asympotic approximation 
-    for the length of a factorial. math.floor() rounds a number down to the nearest integer. 
-    math.pi returns the constant value of pi, which is used as a scaling factor, as is Euler's 
-    number,e, via math.e. """
-    length = 1 + math.floor(0.5 * math.log10(2 * math.pi * n) + n * math.log10(n / math.e))
-    fac = _factorial(n) # see Python-Project-Euler/Euler 1-50/Euler 11-20/euler_15.py
-    return sum(int(fac // 10 ** i % 10) for i in range(length))
+def factorial_digit_sum(n):
+    """ combine length lemma from #16 with Stirling's asympotic approximation for the 
+    length of a factorial. math.floor() rounds a number down to the nearest integer. math.pi 
+    returns the constant value of pi, which is used as a scaling factor, as is Euler's 
+    number, e, via math.e. """
+    digits = math.floor(0.5 * math.log10(2 * math.pi * n) + n * math.log10(n / math.e)) + 1
+    result = [0] * digits
+    result[0] = 1
+  
+    for i in range(2, n + 1):
+        carry = 0
+        """ for each digit, compute its product with the current value of i and 
+        add the carry from the previous calculation. """
+        for j in range(digits):
+            product = result[j] * i + carry
+            """ this gives the digit to be placed at that position, and the 
+            quotient gives the carry for the next calculation. """
+            result[j] = product % 10
+            carry = product // 10
+
+        """ if there is any remaining carry, it's accommodated for by increasing the 
+        number of digits in the result and updating the last digit accordingly. """
+        while carry > 0:
+            digits += 1
+            result[digits - 1] = carry % 10
+            carry //= 10
+    return sum(result)
 
 if __name__ == "__main__":
-  print(sum_digits_factorial(100))
+    print(factorial_digit_sum(100))
