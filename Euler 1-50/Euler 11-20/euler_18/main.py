@@ -7,7 +7,7 @@ below, the maximum total from top to bottom is 23.
 7 4
 2 4 6
 8 5 9 3
-Find the maximum total from top to bottom for a given triangle.
+Find the maximum total from top to bottom for the given triangle.
 """
 
 def maximum_path_sum():
