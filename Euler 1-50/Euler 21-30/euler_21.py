@@ -9,7 +9,6 @@ Sum all amicable numbers < n.
 
 import math
 
-
 def _proper_divisors(n):
     if n in memo:
       return memo[n]
