@@ -9,7 +9,7 @@ Sum all amicable numbers < n.
 
 import math
 
-def _proper_divisors(n):  
+def _proper_divisor_sum(n):  
     sieve = [1] * (n + 1)
     """ account for when i is a proper divisor of i * i. """
     for i in range(2, math.isqrt(n) + 1):
