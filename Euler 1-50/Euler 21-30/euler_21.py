@@ -9,10 +9,7 @@ Sum all amicable numbers < n.
 
 import math
 
-def _proper_divisors(n):
-    if n in memo:
-      return memo[n]
-  
+def _proper_divisors(n):  
     sieve = [1] * (n + 1)
     """ account for when i is a proper divisor of i * i. """
     for i in range(2, math.isqrt(n) + 1):
@@ -20,8 +17,6 @@ def _proper_divisors(n):
         """ iterate over multiples of i. """
         for j in range(i * (i + 1), n + 1, i):
             sieve[j] += i + j // i
-  
-    memo[n] = sieve
     return sieve
 
 def amicable_numbers(limit):
@@ -35,5 +30,4 @@ def amicable_numbers(limit):
     return amicable_sum
 
 if __name__ == "__main__":
-    memo = {}
     print(amicable_numbers(10000))
