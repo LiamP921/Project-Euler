@@ -4,7 +4,7 @@ Amicable Numbers
 d(n) is the sum of n's proper divisors (numbers < n which divide evenly into it).
 If d(a) = b and d(b) = a, where a ≠ b, a and b are an amicable pair, and are each 
 called amicable numbers.
-Evaluate the sum of all amicable numbers < n.
+Sum all amicable numbers < n.
 """
 
 import math
