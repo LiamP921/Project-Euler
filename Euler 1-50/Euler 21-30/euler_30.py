@@ -7,8 +7,7 @@ Sum all the numbers writable as the sum of n powers of their digits.
 """
 
 """
-1). Each complete permutation of six digits (e.g. 112233, 112323, 123123) has the same 
-power sum (in this case, 2*(1^5 + 2^5 + 3^5)=552). Thus, time can be saved by 
+Each complete permutation of six digits has the same power sum. Thus, time can be saved by 
 calculating the power sum of each digit set, checking if the digits of the power sum 
 exactly match the digit set, and recording that power sum if they do.  
 """
