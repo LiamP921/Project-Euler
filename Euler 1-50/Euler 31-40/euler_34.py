@@ -15,7 +15,7 @@ def digit_factorial():
     factorials = {i: _factorial(i) for i in range(10)} # see Python-Project-Euler/Euler 1-50/Euler 11-20/euler_15.py
     sum_nums = 0
 
-    for i in range(3, 99999):
+    for i in range(10, 99999):
         temp_sum = 0
         num = i
         while num > 0:
