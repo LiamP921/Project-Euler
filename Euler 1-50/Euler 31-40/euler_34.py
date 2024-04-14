@@ -6,10 +6,9 @@ Sum all the numbers equal to the sum of the factorial of their digits.
 """
 
 """
-any n-digit number is at most n * 9!. For numbers with >= 8 digits, n * 9! becomes > 
-10^n. This means that any number with >= 8 digits will be too large to be expressed 
-as the sum of the factorials of its digits. Thus, only numbers with 1 <= n <= 7 
-are considered.
+any n-digit number is at most n * 9!. For numbers with >= 8 digits, n * 9! > 10^n. 
+This means that any number with >= 8 digits will be too large to be expressed as the 
+sum of the factorials of its digits. Thus, only numbers with 1 <= n <= 7 are considered.
 """
 
 def digit_factorial():
