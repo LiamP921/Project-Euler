@@ -6,11 +6,9 @@ Only three numbers can be written as the sum of fourth powers of their digits: 1
 Sum all the numbers writable as the sum of n powers of their digits.
 """
 
-"""
-Each complete permutation of six digits has the same power sum. Thus, time can be saved by 
-calculating the power sum of each digit set, checking if the digits of the power sum 
-exactly match the digit set, and recording that power sum if they do.  
-"""
+""" Each complete permutation of six digits has the same power sum. Thus, time can be saved 
+by calculating the power sum of each digit set, and recording the digit power sums which 
+exactly match the set. """
 
 import math
 
