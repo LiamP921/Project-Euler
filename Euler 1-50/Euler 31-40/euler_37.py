@@ -38,7 +38,6 @@ def truncatable_primes():
                 primes.append(new_number)
                 if _is_left_truncatable(new_number):
                     total_sum += new_number
-  
     return total_sum
 
 if __name__ == "__main__":
