@@ -28,7 +28,7 @@ def pandigital_multiples(k):
         concatenated_product = ""
         multiplier = 1
         while len(concatenated_product) < k:
-            """ the concatenation of numbers > 9876 with consecutive multipliers from 
+            """ concatenate numbers > 9876 with consecutive multipliers from 
             1-n > a 9-digit number. """
             concatenated_product += str(integer * multiplier)
             multiplier += 1
