@@ -6,16 +6,35 @@ of two 2-digit numbers is 9009 = 91 * 99.
 Find the largest palindrome made from the product of two n-digit numbers.
 """
 
-def _is_palindrome(n):
-    k = n
-    reversed = 0
-    """ iteratively take the last digit of the original number, 
-    add it to reversed, after shifting the digits to the left,
-    and remove the last digit from the original number. """
-    while k > 0:
-        reversed = 10 * reversed + k % 10
-        k //= 10
-    return n == reversed
+def _is_palindrome(x):
+    """
+    if x is divisible by 10 (i.e. if its last digit is 0) and it's != 0, 
+    it can't be a palindrome because these can't start with 0.
+    """
+    if x < 0 or (x % 10 == 0 and x != 0):
+        return False
+    """
+    first and reversed second part of number.
+    """
+    head, tail = x, 0
+    """
+    ensures that only half of the digits are processed, as the entire number isn't
+    needed to determine if it's palindromic.
+    """
+    while head > tail:
+        """
+        integer divide head by 10 to remove its last digit. the remainder of head 
+        divided by 10 is then added to tail after being multiplied by 10, 
+        effectively building the reversed first half of the number in tail.
+        """
+        head, tail = head // 10, tail * 10 + head % 10
+    """
+    If x has an odd number of digits, head will be one shorter than tail. Here, head
+    needs to equal tail with the last digit removed to be palindromic. If the number 
+    of digits in x is even, head and tail should be equal for the number to be 
+    palindromic.
+    """
+    return head == tail or head == tail // 10
 
 def _modular_inverse(x, modulus_power_of_10):
   """
