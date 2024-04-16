@@ -6,6 +6,8 @@ also prime.
 Calculate the number of circular primes < n.
 """
 
+import itertools
+
 def is_circular(number):
     num_digits = len(str(number))
     for _ in range(num_digits):
