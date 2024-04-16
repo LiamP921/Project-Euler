@@ -1,8 +1,8 @@
 """
 Double Base Palinromes
 ------------------------
-585 = 10010010012 (binary) is palindromic in both bases.
-Sum all numbers < n which are palindromic in bases 10 and 2.
+585 = 10010010012 is palindromic in bases 2 and 10.
+Sum all numbers < n which are palindromic in bases 2 and 10.
 """
 
 import math
