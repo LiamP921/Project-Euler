@@ -24,7 +24,7 @@ def _is_pandigital(number):
 
 def pandigital_multiples(k):
     largest_pandigital = 0
-    for integer in range(1, 9876):
+    for integer in range(9876):
         concatenated_product = ""
         multiplier = 1
         while len(concatenated_product) < k:
