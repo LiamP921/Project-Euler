@@ -13,26 +13,23 @@ def _is_palindrome(x):
     """
     if x < 0 or (x % 10 == 0 and x != 0):
         return False
-    """
-    first and reversed second part of number.
-    """
+    """ first and reversed second part of number. """
     head, tail = x, 0
     """
-    ensures that only half of the digits are processed, as the entire number isn't
-    needed to determine if it's palindromic.
+    ensure that only half of the digits are processed, as the entire number isn't
+    needed to determine palindromicity.
     """
     while head > tail:
         """
-        integer divide head by 10 to remove its last digit. the remainder of head 
-        divided by 10 is then added to tail after being multiplied by 10, 
-        effectively building the reversed first half of the number in tail.
+        div head by 10 to remove its last digit. The, add the remainder of head 
+        divided by 10 to tail after it's multiplied by 10, effectively building the 
+        reversed first half of the number in tail. 
         """
         head, tail = head // 10, tail * 10 + head % 10
     """
-    If x has an odd number of digits, head will be one shorter than tail. Here, head
-    needs to equal tail with the last digit removed to be palindromic. If the number 
-    of digits in x is even, head and tail should be equal for the number to be 
-    palindromic.
+    If x has an odd number of digits, head will be one shorter than tail. Head must equal tail 
+    without the last digit for the number to be palindromic. If the number of digits in x is 
+    even, head and tail should be equal for the number to be palindromic.
     """
     return head == tail or head == tail // 10
 
