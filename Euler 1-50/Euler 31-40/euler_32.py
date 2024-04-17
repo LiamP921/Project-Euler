@@ -16,9 +16,11 @@ def pandigital_products(n):
             """ if the concatenation of i, j, and i * j forms a pandigital of 
             length n. An empty resulting string means all digits from 1-n were used 
             exactly once. """
-            if len(str(i) + str(j) + str(i * j)) == n and not "123456789"[:n].strip(str(i) + str(j) + str(i * j)):
+            product = i * j
+            pandigital_str = str(i) + str(j) + str(product)
+            if len(pandigital_str) == n and set(pandigital_str) == set("123456789"[:n]):
                 """ set ensures that each product is unique. """
-                products.add(i * j)
+                products.add(product)
     return sum(products)
 
 if __name__ == "__main__":
