@@ -12,7 +12,7 @@ def pandigital_products(n):
     products = set()
     """ maximum possible multiplicand to ensure the product remains within a 4-digit number. """
     for i in range(2, 80):
-        for j in range(9876 // i):
+        for j in range(2, 9876 // i):
             """ if the concatenation of i, j, and i * j forms a pandigital of 
             length n. An empty resulting string means all digits from 1-n were used 
             exactly once. """
