@@ -11,7 +11,8 @@ Sum all the products whose multiplicand/multiplier/product identity is writable 
 def pandigital_products(n):
     digits = set("123456789"[:n])
     products = set()
-    """ maximum possible multiplicand to ensure the product remains within a 4-digit number. """
+    """ maximum possible multiplicand ensures the product remains within a 4-digit 
+    number. """
     for i in range(2, 80):
         for j in range(2, 9000 // i):
             """ if the concatenation of i, j, and i * j forms a pandigital of 
