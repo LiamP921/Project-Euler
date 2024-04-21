@@ -19,7 +19,7 @@ def pandigital_products(n):
             length n. An empty resulting string means all digits from 1-n were used 
             exactly once. """
             product = i * j
-            identity = str(i) + str(j) + str(product)
+            identity = "".join([str(i), str(j), str(product)])
             if len(identity) == n and set(identity) == digits:
                 """ set ensures that each product is unique. """
                 products.add(product)
