@@ -23,7 +23,7 @@ def pandigital_multiples(k):
             """ max() returns the largest item in an iterable or in two or 
             more arguments. """
             largest_pandigital = max(largest_pandigital, int(concatenated_product))
-      return largest_pandigital
+    return largest_pandigital
 
 if __name__ == "__main__":
     print(pandigital_multiples(9))
