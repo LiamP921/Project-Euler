@@ -1,32 +1,33 @@
-""" via a text file, sums each individual word's letter's alphabetical values, before summing the number of triangular 'word scores' (given by 'tn = 1/2n(n + 1)')."""
-def getTriangularNumbers(max_value):
-    """ return a set of triangular numbers up to max_value. """
-    triangular_numbers = set()
-    n = 1
-    tn = 1
-    while tn <= max_value:
-        triangular_numbers.add(tn)
-        n += 1
-        tn = n * (n + 1) // 2
-    return triangular_numbers
+"""
+Coded Triangle Numbers
+-------------------------------
+The nth triangle numbers is given by: tn = 0.5(n(n + 1)). Converting each 
+letter in a word to a number corresponding to its alphabetical position and adding 
+these values yields a word value (e.g. SKY = 19 + 11 + 25 = 55 = t10). 
 
-def main():
-    """ evaluate the number of words whose value is a triangular number. """
-    letter_number = {chr(i): i - 64 for i in range(65, 91)}
-    """ max value for a 30-letter word. """
-    triangular_numbers = getTriangularNumbers(26 * 30)
-    
-    with open("Words.txt") as file_object:
-        words = file_object.readline()
-        words_list = words.split(",")
-        words_list = [word[1:-1] for word in words_list]
-        
-        triangular_count = 0
-        for word in words_list:
-            word_value = sum(letter_number[letter] for letter in word.upper())
-            if word_value in triangular_numbers:
-                triangular_count += 1
-    
-    print(triangular_count)
+Calculate the number of words with triangular numbered values in the given text file.
+"""
 
-main()
+def _is_triangle(num):
+    """ A number is triangular if 8(num) + 1 is odd and a perfect square. """
+    n = 8 * num + 1
+    if n % 2 == 0:
+        return 0
+    i = 3
+    while (square := i * i) <= n:
+        if square == n:
+            return 1
+        i += 2
+    return 0
+
+def coded_triangle_numbers():
+    with open("words.txt", "r") as file:
+        words = file.readline().strip().split(",")
+    triangle_words = 0
+    for word in words:
+        word_value = sum(ord(char) - 64 for char in word.strip('"'))
+        triangle_words += _is_triangle(word_value)
+    return triangle_words
+
+if __name__ == "__main__":
+    print(coded_triangle_numbers())
