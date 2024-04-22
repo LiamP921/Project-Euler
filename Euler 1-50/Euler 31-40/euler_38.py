@@ -8,11 +8,12 @@ product of an integer with (1, 2, ..., n) where n > 1.
 """
 
 def pandigital_multiples(k):
-    digits = set("123456789"[:k])
+    digits = set(map(str, range(1, k + 1)))
     largest_pandigital = 0
+  
     """ concatenate numbers > 9876 with consecutive multipliers from 
     1-n > a 9-digit number. """
-    for integer in range(9876):
+    for integer in range(2, 9876):
         concatenated_product = ""
         multiplier = 1
         while len(concatenated_product) < k:
