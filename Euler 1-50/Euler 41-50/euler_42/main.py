@@ -14,6 +14,7 @@ def _is_triangle(num):
     if n % 2 == 0:
         return 0
     i = 3
+    """ := assigns and returns a value in the same expression. """
     while (square := i * i) <= n:
         if square == n:
             return 1
