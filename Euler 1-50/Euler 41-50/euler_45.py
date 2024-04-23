@@ -27,7 +27,8 @@ def tri_pent_hex():
     pentagonal_numbers = _figurates(5)
     p = 0
     for h in _figurates(6):
-        while p < h: 
+        while p < h:
+            """ next() returns the next item in an iterator. """
             p = next(pentagonal_numbers)
         if p == h > 40755:
             return h
