@@ -11,23 +11,23 @@ pentagonal, and D = |Pk − Pj| is minimised, calculate D.
 """ 1). If n is pentagonal, there exists k such that: (isqrt(24 * n + 1) + 1) // 6.
 Thus, n is only pentagonal if it's the kth pentagonal. 
 
-2a). If p[j], p[k] are two pentagonals with j < k: p[k] - p[j] == k * (3 * k - 1) / 2 
+2). If p[j], p[k] are two pentagonals with j < k: p[k] - p[j] == k * (3 * k - 1) / 2 
 - j * (3 * j - 1) / 2 == p[k - j] + 3 * j * (k - j).
 
-2b). Only pairs (j, k) where the differences are a pentagonal p[t] are needed. 
+3). Only pairs (j, k) where the differences are a pentagonal p[t] are needed. 
 Setting s = k - j gives: p[t] == p[s] + 3 * j * s. It thus suffices to only consider 
 pairs (s, t) with s < t for which p[t] - p[s] is a multiple of 3 * s. These 
 automatically yield j and k such that p[k] - p[j] == p[t], leaving the need to only 
 check p[j] + p[k] for pentagonality.
 
-3a). As the minimum p[t] with the above properties is needed, consider each s < t 
+4a). As the minimum p[t] with the above properties is needed, consider each s < t 
 before moving on to t + 1. Given the cost of calculating (p[t] - p[s]) % (3 * s), 
 first screen candidate s values in view of the following.
 
-3b). For all non-negative integers n: (p[n] - n) % 3 == (n * (3 * n - 3) / 2) % 3 == 
+4b). For all non-negative integers n: (p[n] - n) % 3 == (n * (3 * n - 3) / 2) % 3 == 
 0. Thus, if (p[t] - p[s]) % (3*s) == 0, it must be had that (t - s) % 3 == 0
 
-3c). If (p[t] - p[s]) % (3 * s) == 0: (p[t] - p[s]) % s == 0 => 2 * p[t] % s == 0 """
+4c). If (p[t] - p[s]) % (3 * s) == 0: (p[t] - p[s]) % s == 0 => 2 * p[t] % s == 0 """
 
 import math
 import itertools
