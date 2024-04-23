@@ -19,8 +19,9 @@ def _sum_pandigitals(digits_left, current, current_length, primes):
             digit = digits_left.pop(i)
             current += digit
             current_length += 1
-            """ if the length of the current pandigital < 4 or if the last three 
-            digits form a substring divisible by the corresponding prime. """
+            """ if the length of the current pandigital < 4 or if the last three digits form 
+            a substring divisible by the corresponding prime. Only consider the last three pandigital digits, 
+            as the largest prime, 17, corresponds to a 3-digit substring. """
             if current_length < 4 or int(current[current_length - 3 : current_length]) % primes[current_length - 4] == 0:
                 total_sum += _sum_pandigitals(digits_left, current, current_length, primes)
             """ after each iteration, remove the last added digit to backtrack, 
