@@ -8,7 +8,7 @@ Using the pair of pentagonals, Pj and Pk, for which their sum and difference are
 pentagonal, and D = |Pk − Pj| is minimised, calculate D.
 """
 
-""" 1). If n is pentagonal, there exists k such that:(isqrt(24 * n + 1) + 1) // 6.
+""" 1). If n is pentagonal, there exists k such that: (isqrt(24 * n + 1) + 1) // 6.
 Thus, n is only pentagonal if it's the kth pentagonal. 
 
 2a). If p[j], p[k] are two pentagonals with j < k: p[k] - p[j] == k * (3 * k - 1) / 2 
