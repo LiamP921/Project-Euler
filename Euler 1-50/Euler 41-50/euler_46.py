@@ -12,11 +12,12 @@ prime and twice a square.
 import math
 
 def goldbachs_other_conjecture():
-    n = 33
+    n = 5
+    """ alternate between 1 and -1 to check every odd number. """
+    f = 1
     primes = set()
 
     while True:
-        """ n is prime if it's divisible by all primes in the set. """
         if all(n % p for p in primes):
             primes.add(n)
         else:
@@ -24,7 +25,8 @@ def goldbachs_other_conjecture():
             square. """
             if not any((n - 2 * i * i) in primes for i in range(2, math.isqrt(n // 2) + 1)):
                 return n
-        n += 2
+        n += 3 - f
+        f = -f
 
 if __name__ == "__main__":
     print(goldbachs_other_conjecture())
