@@ -9,20 +9,21 @@ Sum all the products whose multiplicand/multiplier/product identity is writable 
 """
 
 def pandigital_products(n):
-    digits = set(map(str, range(1, n + 1)))
     products = set()
-    """ maximum possible multiplicand ensures the product remains within a 4-digit 
-    number. """
+    digits = set("1234567890"[:n])
     for i in range(2, 80):
-        for j in range(2, 9000 // i):
+        j = i + 1
+        """ product can never > four digits, so it must be < 9999. However, there 
+        are no valid factors that could create a product with a first digit 9. """
+        while i * j < 8999:
             """ if the concatenation of i, j, and i * j forms a pandigital of 
-            length n. An empty resulting string means all digits from 1-n were used 
+            length n. An empty resulting string means all digits 1-n were used 
             exactly once. """
-            product = i * j
-            identity = "".join([str(i), str(j), str(product)])
-            if len(identity) == n and set(identity) == digits:
-                """ set ensures that each product is unique. """
-                products.add(product)
+            identity = "".join([str(i), str(j), str(i * j)])
+            if len(identity) == n and set(identity) == digits: 
+                products.add(i * j)
+            j += 1
+    """ set ensures each product is unique """
     return sum(products)
 
 if __name__ == "__main__":
