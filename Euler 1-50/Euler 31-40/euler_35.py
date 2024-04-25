@@ -8,7 +8,7 @@ Calculate the number of circular primes < n.
 
 import itertools
 
-def is_circular(number):
+def _is_circular(number):
     num_digits = len(str(number))
     for _ in range(num_digits):
         if not _miller_rabin(number): # see Python-Recreational-Mathematics/primality/miller_rabin.py
@@ -32,9 +32,9 @@ def circular_primes(n):
         specified by repeat """
         for rotation in itertools.product(digits, repeat=i):
             number = int("".join(rotation))
-            if number < n and is_circular(number):
+            if number < n and _is_circular(number):
                 count += 1
     return count
-  
+
 if __name__ == "__main__":
     print(circular_primes(1_000_000))
