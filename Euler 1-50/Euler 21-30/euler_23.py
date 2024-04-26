@@ -3,10 +3,10 @@ Non-Abundant Sums
 ---------------------
 A perfect/abundant/deficient number's proper divisor sum is ==/</> than said number. 
 As 12 is the smallest abundant number, 24 is the smallest number that can be written as 
-the sum of two abundants. It can be shown that all integers > 28123 can be written as the 
-sum of two abundants. However, this upper limit cannot be reduced any further by analysis, 
-even though the greatest number that can't be expressed as the sum of two abundants is less 
-than this limit.
+the sum of two abundants. All integers > 28123 can be written as the sum of two abundants. 
+However, this upper limit can't be reduced any further by analysis, even though the greatest 
+number that can't be expressed as the sum of two abundants is < this limit.
+
 Sum all the positive integers <= limit which can't be written as the sum of two abundants.
 """
 
