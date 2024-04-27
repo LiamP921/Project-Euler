@@ -20,8 +20,6 @@ def _lowest_common_multiple(a, b):
     return (a * b) // _greatest_common_divisor(a, b)
 
 def smallest_multiple(n):
-    if n < 1:
-        return
     result = 1
     for i in range(2, n + 1):
         result = _lowest_common_multiple(result, i)
