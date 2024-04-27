@@ -6,9 +6,9 @@ Find the sum of all the multiples of 3 or 5 < num.
 """
 
 """
-1a). Use the Gauss summation formula. n∑i=1 = (1/2)(n(n + 1)). All multiples of 3 
-for example are 3,6,9,12... Placing 3 outside the brackets, gives 
-3⋅(1,2,3,4,...). Thus, the amount of numbers needed to be summated is [n/3]
+1a). Gauss summation formula: n∑i=1 = (1/2)(n(n + 1)). Multiples of 3 are 
+3,6,9,12... Placing 3 outside the brackets gives 3⋅(1,2,3,4,...). Thus, the 
+amount of numbers needed to be summated is [n/3]
 
 1b). Finding it for a general k and calculating the sum of multiples requires: 
 σ(n,k) = k [n/k]∑i=1 i = (k/2)[n/k]([n/k] + 1).
