@@ -18,7 +18,7 @@ def prime_permutations():
         n += 3 - f
         f = -f
         b, c = n + 3330, n + 6660
-        if all(_miller_rabin(num) for num in (n, b, c)) and _is_perm(n, b) and _is_perm(b, c): # see Python-Recreational-Mathematics/primality/sieves/miller_rabins.py
+        if all(_miller_rabin(num) for num in (n, b, c)) and _is_perm(n, b) and _is_perm(b, c): # see Python-Recreational-Mathematics/primality/sieves/miller_rabin.py
             return "".join([str(n), str(b), str(c)])
 
 if __name__ == "__main__":
