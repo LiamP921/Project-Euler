@@ -29,8 +29,8 @@ def digit_n_powers(n):
     num_digits = 0 
     reached_limit = False
 
-    """ calculate the maximum number of digits by iterating until a limit where 
-    adding one more digit would not increase the maximum possible number is found. """
+    """ calculate the maximum number of digits by iterating until a limit, where 
+    adding one more digit would not increase the maximum possible number, is found. """
     while not reached_limit:
         if math.log10((num_digits + 1) * (9 ** n)) + 1 < (num_digits + 1):
             reached_limit = True
