@@ -20,11 +20,12 @@ def non_abundant_sum(limit):
     for n in range(1, limit + 1):
         if sieve[n] > n: 
             abundants.add(n)
-        """  if there are no abundants a such that n - a is also aabundant, adds n to 
+        """  if there are no abundants a such that n - a is also abundant, adds n to 
         the result. """
         if not any((n - a in abundants) for a in abundants): 
             result += n
     return result
 
 if __name__ == "__main__":
+    """ highest number which can't be written as the sum of two abundants. """
     print(non_abundant_sum(20161))
