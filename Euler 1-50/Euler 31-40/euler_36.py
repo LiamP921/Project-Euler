@@ -10,7 +10,7 @@ import math
 def _make_base_2_palindrome(n, odd_length):
     result = n
     if odd_length:
-        """ remove n's LSB, ensuring that the enerated palindrome's 
+        """ remove n's LSB, ensuring that the generated palindrome's 
         length is odd. """
         n >>= 1
     while n > 0:
@@ -26,7 +26,7 @@ def double_base_palindromes(n):
         p_even = _make_base_2_palindrome(i, False)
 
         """ generate an odd and even length base 2 palindrome. if either > n, 
-        returns the current sum of palindromes. """
+        return the current sum. """
         if p_odd >= n and p_even >= n:
             return sum_palindromes
 
