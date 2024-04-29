@@ -10,7 +10,8 @@ def nth_prime(n):
     asymptotic approximation, becoming more accurate as n grows. For greater 
     precision, incorporate log(log(n)) to adjust for the increasing gap between 
     consecutive primes. """
-    return _eratosthenes(math.ceil(n * (math.log(n) + math.log(math.log(n)))))[n - 1] # see Python-Recreational-Mathematics/primality/sieves/eratosthenes.py
+    upper_bound = math.ceil(n * (math.log(n) + math.log(math.log(n))))
+    return _eratosthenes(upper_bound)[n - 1] # see Python-Recreational-Mathematics/primality/sieves/eratosthenes.py
 
 if __name__ == "__main__":
   print(nth_prime(10001))
