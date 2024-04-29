@@ -27,5 +27,5 @@ def non_abundant_sum(limit):
     return result
 
 if __name__ == "__main__":
-    """ highest number which can't be written as the sum of two abundants. """
+    """ largest number which can't be written as the sum of two abundants. """
     print(non_abundant_sum(20161))
