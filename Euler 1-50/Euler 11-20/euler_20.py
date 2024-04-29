@@ -28,8 +28,8 @@ def factorial_digit_sum(n):
             result[j] = product % 10
             carry = product // 10
 
-        """ if there is any remaining carry, it's accommodated for by increasing the 
-        number of digits in the result and updating the last digit accordingly. """
+        """ if there is any remaining carry, increase the number of digits in the 
+        result and update the last digit accordingly. """
         while carry > 0:
             digits += 1
             result[digits - 1] = carry % 10
