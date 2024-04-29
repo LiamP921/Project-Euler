@@ -89,7 +89,7 @@ def largest_palindrome(n_digits):
               """
               if p is a palindrome modulo m, the modular_inverse also is. This 
               optimises the search for factor pairs, as it allows one factor to be 
-              found by reversing the digits another factor modulo some modulus, 
+              found by reversing the digits of another modulo some modulus, 
               removing the need to consider all possible pairs.
               """
               reverse_second_factor = _modular_inverse(x, modulo)
