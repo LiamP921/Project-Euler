@@ -16,7 +16,7 @@ def _count_chain(n):
     if n in memo:
         return memo[n]
     if n % 2 == 0:
-        """ 1a). If n is even, n → n // 2 ⇒ Collatz(n) = Collatz(n // 2) + 1. 
+        """ 1a). If n is even, n → n // 2 → Collatz(n) = Collatz(n // 2) + 1. 
         Therefore, Collatz(2k) > Collatz(k) for all k. """
         memo[n] = 1 + _count_chain(n // 2)
     else:
