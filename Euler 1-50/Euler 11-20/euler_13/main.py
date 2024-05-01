@@ -13,7 +13,7 @@ def large_sum(n):
         for line in file:
             numbers.append(line.strip())
   
-    result = ''
+    result = ""
     """ while there are numbers left in the string, accummulate a sum of the LSD. """
     while len(numbers) > 0:
         sum_of_digit_position = 0
