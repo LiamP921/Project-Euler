@@ -10,18 +10,16 @@ number that can't be expressed as the sum of two abundants is < this limit.
 Sum all the positive integers <= limit which can't be written as the sum of two abundants.
 """
 
-import math
-  
-def non_abundant_sum(limit):
-    sieve = _proper_divisor_sum(limit) # see Python-Project-Euler/Euler 1-50/Euler 21-30/euler_21.py
+def non_abundant_sums(limit):
+    sum_divisors = _proper_divisor_sums(limit) # see Python-Project-Euler/Euler 1-50/Euler 21-30/euler_21.py
     result = 0
     abundants = set()
     """ n's sum of proper divisors > n, add it to the set of abundants. """
     for n in range(1, limit + 1):
-        if sieve[n] > n: 
+        if sum_divisors[n] > n: 
             abundants.add(n)
-        """  if there are no abundants a such that n - a is also abundant, adds n to 
-        the result. """
+        """ if there are no abundants a such that n - a is also abundant, adds n 
+        to the result. """
         if not any((n - a in abundants) for a in abundants): 
             result += n
     return result
