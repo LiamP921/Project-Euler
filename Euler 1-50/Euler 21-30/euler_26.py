@@ -5,13 +5,13 @@ A unit fraction contains 1 in the numerator. The following are decimal represent
 of the unit fractions with denominators 2-7:
 1/2 = 0.5, 1/3 = 0.(3), 1/4 = 0.25, 1/5 = 0.2, 1/6 = 0.1(6), 1/7 = 0.(142857)
 Where 0.1(6) means 0.166666..., and has a 1-digit recurring cycle. 
+
 Find the value d < n for which 1/d contains the longest recurring cycle in its 
-decimal fraction part.
-"""
+decimal fraction part. """
 
 import math
 
-def carmichael(n):
+def _carmichael(n):
     """ give the smallest positive integer that, when raised to the power of any integer coprime to n, 
     yields 1 modulo n. """
     result = 1
@@ -23,6 +23,7 @@ def carmichael(n):
           
     p = 3
     sqrt_n = math.isqrt(n)
+    
     """  iterate through odd numbers from 3 to sqrt(n), as if p is a prime divisor of 
     n, p ≤ n. """
     while p <= sqrt_n:
@@ -66,7 +67,7 @@ def longest_reciprocal_cycle(nums, base=10):
         if d != 1:
             """ the length of the repeating decimal is the multiplicative order of 
             10 mod d. """
-            limit = carmichael(d)
+            limit = _carmichael(d)
             remainder = 1
             order = 1
             found_cycle = False
