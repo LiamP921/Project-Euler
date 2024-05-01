@@ -16,13 +16,13 @@ def factorial_digit_sum(n):
     digits = math.floor(0.5 * math.log10(2 * math.pi * n) + n * math.log10(n / math.e)) + 1
     result = [0] * digits
     result[0] = 1
-  
+
     for i in range(2, n + 1):
         carry = 0
         """ for each digit, compute its product with the current value of i and 
         add the carry from the previous calculation. """
         for j in range(digits):
-            product = result[j] * i + carry
+            product = i * result[j] + carry
             """ this gives the digit to be placed at that position, and the 
             quotient gives the carry for the next calculation. """
             result[j] = product % 10
@@ -35,6 +35,3 @@ def factorial_digit_sum(n):
             result[digits - 1] = carry % 10
             carry //= 10
     return sum(result)
-
-if __name__ == "__main__":
-    print(factorial_digit_sum(100))
