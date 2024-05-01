@@ -59,7 +59,7 @@ def _modular_inverse(x, modulus_power_of_10):
       """
       inverse = (inverse * (2 - ax)) % modulus_power_of_10
 
-def largest_palindrome(n_digits):
+def largest_palindrome_product(n_digits):
   first_factor_digits = n_digits // 2
   found_palindrome = False
   done = False
@@ -106,4 +106,4 @@ def largest_palindrome(n_digits):
   return largest_palindrome
 
 if __name__ == "__main__":
-    print(largest_palindrome(3))
+    print(largest_palindrome_product(3))
