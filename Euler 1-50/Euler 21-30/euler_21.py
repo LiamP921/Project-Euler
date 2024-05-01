@@ -8,24 +8,26 @@ Sum all amicable numbers < n. """
 
 import math
 
-def _proper_divisor_sum(n):  
-    sieve = [1] * (n + 1)
-    """ account for when i is a proper divisor of i * i. """
+def _proper_divisor_sums(n):
+    """ sum of proper divisors for each number 1-n. """
+    div_sum = [1] * (n + 1) 
     for i in range(2, math.isqrt(n) + 1):
-        sieve[i * i] += i
-        """ iterate over multiples of i. """
-        for j in range(i * (i + 1), n + 1, i):
-            sieve[j] += i + j // i
-    return sieve
+        """ i is a proper divisor of i * i. """
+        div_sum[i * i] += i
+        """ calculate proper divisors of all multiples of i * i. """
+        for j in range(i * i + i, n, i):
+            """ i and j // i represents different proper divisors of j. """
+            div_sum[j] += i + j // i
+    return div_sum
 
 def amicable_numbers(limit):
     amicable_sum = 0
-    sieve = _proper_divisor_sum(limit)
-    """ if the sum of k's proper divisors (sieve[k]) < k and if the sum of proper divisors 
-      of sieve[k] == k, k and sieve[k] form an amicable pair. """
+    candidates = _proper_divisor_sums(limit)
+    """ if the sum of k's proper divisors (candidates[k]) < k and if the sum of proper divisors 
+      of candidates[k] == k, k and candidates[k] form an amicable pair. """
     for k in range(limit):
-        if sieve[k] < k and sieve[sieve[k]] == k:
-            amicable_sum += k + sieve[k]
+        if candidates[k] < k and candidates[candidates[k]] == k:
+            amicable_sum += k + candidates[k]
     return amicable_sum
 
 if __name__ == "__main__":
