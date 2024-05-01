@@ -12,6 +12,8 @@ decimal fraction part.
 import math
 
 def carmichael(n):
+    """ give the smallest positive integer that, when raised to the power of any integer coprime to n, 
+    yields 1 modulo n. """
     result = 1
     """ if n is even, left shift by 1 and divide it by 2 until it's odd. """
     if not n & 1:
@@ -35,7 +37,8 @@ def carmichael(n):
                 n //= p
             sqrt_n = math.isqrt(n)
         p += 2
-    """ n itself is a prime, so update result by finding the LCM of the result and n 
+        
+    """ n itself is prime, so update result by finding the LCM of the result and n 
     − 1, as the order of n mod n is n − 1. """
     if n > 1:
         result = _lowest_common_multiple(result, n - 1)
@@ -91,7 +94,6 @@ def longest_reciprocal_cycle(nums, base=10):
             if order == i - 1:
                 max_order_found = True
         i -= 1
-
     return max_integer
 
 if __name__ == "__main__":
