@@ -35,7 +35,6 @@ def power_digit_sum(n, exp):
             """ update carry with the tens place of the carry, after incrementing order 
             to accommodate the new digit. """
             carry //= 10
-  
     return sum(number)
 
 if __name__ == "__main__":
