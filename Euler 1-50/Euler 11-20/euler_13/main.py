@@ -7,7 +7,7 @@ Work out the first n digits of the sum of the given numbers.
 def large_sum(n):
     """ Because only one digit is truncated every time a carry value is added to the list, 
     there will never be more entries than the maximum number of digits in the carry value. 
-    For instance, if there's a 9 digit in each carry value, the sum will be log(n * 9) * 9. """ 
+    For instance, if there's a 9 in each carry value, the sum will be log(n * 9) * 9. """ 
     with open("numbers.txt", "r") as file:
         numbers = []
         for line in file:
