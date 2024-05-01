@@ -20,13 +20,13 @@ def largest_grid_product(n):
             """ for each row, slide an n-sized window across it to find all possible 
             horizontal sequences; np.prod() returns the product array elements of a 
             given axis. """
-            product = np.prod(grid[i, j:j+n])
+            product = np.prod(grid[i, j:j + n])
             if product > max_product:
                 max_product = product
 
     for i in range(x): # vertical
         for j in range(y - n + 1):
-            product = np.prod(grid[j:j+n, i])
+            product = np.prod(grid[j:j + n, i])
             if product > max_product:
                 max_product = product
 
@@ -34,7 +34,7 @@ def largest_grid_product(n):
         for j in range(x - n + 1):
             """ np.diag() creates a new ndarray with the given 1D array as its diagonal 
             elements, or extracts the diagonal from the given ndarray. """
-            product = np.prod(np.diagonal(grid[i:i+n, j:j+n]))
+            product = np.prod(np.diagonal(grid[i:i + n, j:j + n]))
             if product > max_product:
                 max_product = product
 
@@ -42,7 +42,7 @@ def largest_grid_product(n):
         for j in range(n - 1, x):
             """ np.fliplr flips a 2d array in a left-right direction; columns are preserved, 
             but appear in a different order. """
-            product = np.prod(np.diagonal(np.fliplr(grid[i:i+n, j-n+1:j+1])))
+            product = np.prod(np.diagonal(np.fliplr(grid[i:i + n, j - n + 1:j + 1])))
             if product > max_product:
                 max_product = product
     return max_product
