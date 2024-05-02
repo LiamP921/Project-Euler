@@ -1,5 +1,5 @@
 # Project-Euler
-My solutions to the first 100 Project Euler problems!
+My solutions to the first 50 Project Euler problems!
 
 ## Euler 1-50
 
