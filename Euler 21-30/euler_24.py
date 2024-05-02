@@ -6,7 +6,6 @@ A permutation is an ordered arrangement of objects. The lexicographic permutatio
 Find the nth lexicographic permutation of the digits 0-9.
 """
 
-
 def lexicographic_permutation(n):
     digits = list(range(10))
     permutation = ""
