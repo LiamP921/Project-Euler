@@ -1,7 +1,7 @@
 # Project-Euler
 My solutions to the first 50 Project Euler problems!
 
-## Euler 1-50
+## Euler 1-10
 
 1.	Multiples of 3 or 5	
 
@@ -23,7 +23,7 @@ My solutions to the first 50 Project Euler problems!
 
 10.	Summation of Primes	
 
-### Euler 11-20
+## Euler 11-20
 11.	Largest Product in a Grid	
 
 12.	Highly Divisible Triangular Number	
