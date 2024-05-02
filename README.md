@@ -3,7 +3,6 @@ My solutions to the first 50 Project Euler problems!
 
 ## Euler 1-50
 
-### Euler 1-10
 1.	Multiples of 3 or 5	
 
 2.	Even Fibonacci Numbers	
@@ -45,7 +44,7 @@ My solutions to the first 50 Project Euler problems!
 
 20.	Factorial Digit Sum	
 
-### Euler 21-30
+## Euler 21-30
 21.	Amicable Numbers	
 
 22.	Names Scores	
@@ -66,7 +65,7 @@ My solutions to the first 50 Project Euler problems!
 
 30.	Digit Fifth Powers	
 
-### Euler 31-40
+## Euler 31-40
 31.	Coin Sums	
 
 32.	Pandigital Products	
@@ -87,7 +86,7 @@ My solutions to the first 50 Project Euler problems!
 
 40.	Champernowne's Constant
 
-### Euler 41-50
+## Euler 41-50
 41.	Pandigital Prime	
 
 42.	Coded Triangle Numbers	
