@@ -6,14 +6,6 @@ Pythagorean triplets are sets of three naturals, a < b < c, for which, a^2 + b^2
 Find the product(s) abc such that a + b + c = sum_value.
 """
 
-def _greatest_common_divisor(a, b):
-    while b:
-        """ Euclidean algorithm repeatedly applies the property that the GCD of two 
-        numbers is the same as that of one of the numbers and the remainder of 
-        dividing the other number by the first. """
-        a, b = b, a % b
-    return a
-
 import math
 
 def special_pythagorean_triplets(sum_value):
