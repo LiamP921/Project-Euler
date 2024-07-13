@@ -2,8 +2,10 @@
 My solutions to the first 50 Project Euler problems!
 
 ## Euler 1-10
-
-Multiples of 3 or 5, Even Fibonacci Numbers, Largest Prime Factor, Largest Palindrome Product, 
+1. Multiples of 3 or 5
+2. Even Fibonacci Numbers
+3. Largest Prime Factor
+4. Largest Palindrome Product, 
 Smallest Multiple, Sum Square Difference,	10001st Prime, Largest Product in a Series,	Special Pythagorean Triplet, 
 Summation of Primes	
 
