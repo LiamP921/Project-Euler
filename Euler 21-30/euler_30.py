@@ -1,10 +1,8 @@
-"""
-Digit Fifth Powers
--------------------
+""" Digit Fifth Powers
+-----------------------------
 Only three numbers can be written as the sum of fourth powers of their digits: 1634 (14 
 + 64 + 34 + 44), 8208 (84 + 24 + 04 + 84), and 9474 (94 + 44 + 74 + 44).
-Sum all the numbers writable as the sum of n powers of their digits.
-"""
+Sum all the numbers writable as the sum of n powers of their digits. """
 
 """ Each complete permutation of six digits has the same power sum. Thus, time can be saved 
 by calculating the power sum of each digit set, and recording the digit power sums which 
