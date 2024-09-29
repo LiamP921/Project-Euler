@@ -1,11 +1,9 @@
-"""
-Coin Sums
------------
+""" Coin Sums
+-----------------
 There are eight coins in general circulation in UK currency: 1p, 2p, 5p, 10p, 20p, 50p, 
 £1 (100p), and £2 (200p). £2 can be made as such: 1*£1 + 1*50p + 2*20p + 1*5p + 1*2p + 
 3*1p.
-Calculate how many different ways n pence can be made using any number of coins.
-"""
+Calculate how many different ways n pence can be made using any number of coins. """
 
 def coin_sums(n):
     ways = [0] * (n + 1)
