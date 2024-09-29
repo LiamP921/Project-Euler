@@ -1,23 +1,19 @@
-"""
-Digit Factorials
+""" Digit Factorials
 ------------------
 145 is curious, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
-Sum all the numbers equal to the sum of the factorial of their digits.
-"""
+Sum all the numbers equal to the sum of the factorial of their digits. """
 
-"""
-1). For numbers with >= 8 digits, n * 9! > 10^n, making them too large to be 
+""" 1). For numbers with >= 8 digits, n * 9! > 10^n, making them too large to be 
 expressed as the sum of the factorials of its digits. Thus, only numbers with 
 1 <= n <= 7 are considered.
 
 2). The factorial of any odd/even number contains no/at least one factor of 2. 
 Since the sum of factorials will consist of the sum of individual ones, if 
-any of the digits are odd, the sum will be too. 
-"""
+any of the digits are odd, the sum will be too. """
 
 def digit_factorial():
     """ precompute factorial for each digit. """
-    factorials = {i: _factorial(i) for i in range(10)} # see Python-Project-Euler/Euler 1-50/Euler 11-20/euler_15.py
+    factorials = {i: _factorial(i) for i in range(10)} # see Project-Euler/Euler 11-20/euler_15.py
     sum_nums = 0
 
     for i in range(10, 99999, 3):
