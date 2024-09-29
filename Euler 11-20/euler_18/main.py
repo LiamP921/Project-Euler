@@ -1,14 +1,12 @@
-"""
-Maximum Path Sum I
----------------------
+""" Maximum Path Sum I
+-----------------------------
 Starting at the top of the triangle below and moving to adjacent numbers on the row 
 below, the maximum total from top to bottom is 23.
 3
 7 4
 2 4 6
 8 5 9 3
-Find the maximum total from top to bottom for the given triangle.
-"""
+Find the maximum total from top to bottom for the given triangle. """
 
 def maximum_path_sum():
     with open("triangle.txt", "r") as file:
