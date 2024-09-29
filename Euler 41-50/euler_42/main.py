@@ -1,12 +1,10 @@
-"""
-Coded Triangle Numbers
--------------------------------
+""" Coded Triangle Numbers
+-----------------------------
 The nth triangle numbers is given by: tn = 0.5(n(n + 1)). Converting each 
 letter in a word to a number corresponding to its alphabetical position and adding 
 these values yields a word value (e.g. SKY = 19 + 11 + 25 = 55 = t10). 
 
-Calculate the number of words with triangular numbered values in the given text file.
-"""
+Calculate the number of words with triangular numbered values in the given text file. """
 
 def _is_triangle(num):
     """ A number is triangular if 8(num) + 1 is odd and a perfect square. """
