@@ -2,8 +2,7 @@
 -----------------------
 2520 is the smallest number that can be divided by each of the numbers 1 to 10 
 without any remainder.
-Find the smallest positive number that's evenly divisible by all the numbers 1 to n
-"""
+Find the smallest positive number that's evenly divisible by all the numbers 1 to n. """
 
 def _greatest_common_divisor(a, b):
     while b:
