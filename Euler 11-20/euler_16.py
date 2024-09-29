@@ -1,8 +1,6 @@
-"""
-Power Digit Sum
------------------
-Sum the digits of n^exp.
-"""
+""" Power Digit Sum
+-------------------------------
+Sum the digits of n^exp."""
 
 import math
 
