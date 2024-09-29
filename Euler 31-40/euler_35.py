@@ -1,17 +1,15 @@
-"""
-Circular Primes
------------------
+""" Circular Primes
+----------------------
 197 is a circular prime, as all rotations of its digits  (197, 971, and 719) are 
 also prime.
-Calculate the number of circular primes < n.
-"""
+Calculate the number of circular primes < n. """
 
 import itertools
 
 def _is_circular_prime(number):
     num_digits = len(str(number))
     for _ in range(num_digits):
-        if not _miller_rabin(number): # see Python-Recreational-Mathematics/primality/miller_rabin.py
+        if not _miller_rabin(number): # see Recreational Algorithms/number_theory/miller_rabin.py
             return False
         else:
             """ rotate number by moving the last digit to the first position. """
@@ -29,7 +27,7 @@ def circular_primes(n):
     for i in range(1, len(str(n)) + 1):
         """ itertools.product() returns the Cartesian Product of an iterable  
         (the set of all ordered pairs (a, b)) with itself for the number of times 
-        specified by repeat """
+        specified by repeat. """
         for rotation in itertools.product(digits, repeat=i):
             number = int("".join(rotation))
             if number < n and _is_circular_prime(number):
