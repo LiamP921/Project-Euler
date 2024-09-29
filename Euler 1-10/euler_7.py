@@ -1,5 +1,5 @@
 """ 10001st Prime
------------------
+---------------------
 By listing the first six primes (2, 3, 5, 7, 11, and 13), 13 is the 6th.
 Find the nth prime. """
 
