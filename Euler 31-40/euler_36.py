@@ -1,9 +1,7 @@
-"""
-Double Base Palinromes
+""" Double Base Palinromes
 ------------------------
 585 = 10010010012 is palindromic in bases 2 and 10.
-Sum all numbers < n which are palindromic in bases 2 and 10.
-"""
+Sum all numbers < n which are palindromic in bases 2 and 10. """
 
 import math
 
@@ -31,7 +29,7 @@ def double_base_palindromes(n):
             return sum_palindromes
 
         """ if not, check if it's palindromic in base 10. """
-        if _is_palindrome(p_odd) and p_odd < n: # see Python-Project-Euler/Euler 1-50/Euler 1-10/euler_4.py
+        if _is_palindrome(p_odd) and p_odd < n: # see Project-Euler/Euler 1-10/euler_4.py
             sum_palindromes += p_odd
         if _is_palindrome(p_even) and p_even < n:
             sum_palindromes += p_even
