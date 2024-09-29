@@ -1,16 +1,12 @@
-"""
-Longest Collatz Sequence
--------------------------
+""" Longest Collatz Sequence
+-----------------------------------
 The following iterative sequence is defined for the set of positive integers:
-n → n/2 (n is even)
-n → 3n + 1 (n is odd)
+n → n/2 (n is even), n → 3n + 1 (n is odd)
 Using this rule above and starting with 13, the following sequence is generated:
 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
-It can be seen that this sequence (starting and finishing at 13 and 1) contains 10 terms. 
-It's thought that all starting numbers finish at 1.
+It can be seen that this sequence contains 10 terms. It's thought that all starting numbers finish at 1.
 Find which starting number, under the given limit, produces the longest chain.
-Note: Once the chain starts, the terms are allowed to exceed the limit.
-"""
+Note: Once the chain starts, the terms can exceed the limit. """
 
 def _count_chain(n):
     if n in memo:
