@@ -1,9 +1,7 @@
-"""
-Pandigital Prime
--------------------
+""" Pandigital Prime
+-----------------------
 An n-digit number is pandigital if it uses all the digits 1 to n exactly once. 
-Find the largest n-digit pandigital prime.
-"""
+Find the largest n-digit pandigital prime. """
 
 import itertools
 
@@ -13,7 +11,7 @@ def pandigital_prime(n):
     if n not in [4, 7]:
         return None
     """ map() returns a list of results after applying the given function to each 
-    item of a given iterable """
+    item of a given iterable. """
     digits = set(map(str, range(1, n + 1)))
     largest_pandigital_prime = 0
     """ itertools.permutations() returns length permutations of elements in an 
@@ -21,7 +19,7 @@ def pandigital_prime(n):
     in lexicographic order. """
     for i in itertools.permutations(digits, n):
         permutation_number = int("".join(i))
-        if _miller_rabin(permutation_number): # see Python-Recreational-Mathematics/primality/miller_rabin.py
+        if _miller_rabin(permutation_number): # see Recreational-Algorithms/number_theory/miller_rabin.py
             largest_pandigital_prime = max(largest_pandigital_prime, permutation_number)
     return largest_pandigital_prime
 
