@@ -1,12 +1,10 @@
-"""
-Pandigital Products
+""" Pandigital Products
 --------------------
 An n-digit number is pandigital if it uses all the digits 1-n exactly once. The product 
 7254 is unusual, as the identity, 39 × 186 = 7254 is 1-9 pandigital.
 
 Sum all the products whose multiplicand/multiplier/product identity is writable as a 
-1 through n pandigital.
-"""
+1 through n pandigital. """
 
 def pandigital_products(n):
     products = set()
