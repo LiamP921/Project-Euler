@@ -1,12 +1,10 @@
-"""
-Champernowne's Constant
--------------------------
+""" Champernowne's Constant
+------------------------------
 An irrational decimal fraction is created by concatenating the positive integers: 
 0.123456789101112131415161718192021... Here, the 12th digit of the fractional part is 1.
 
 If dn represents the nth digit of the fractional part, calculate d1 * d10 * 
-d10^2, ..., * d10^n
-"""
+d10^2, ..., * d10^n. """
 
 import functools
 import operator
