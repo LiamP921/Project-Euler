@@ -1,10 +1,8 @@
-"""
-Special Pythagorean triplet
------------------------------
+""" Special Pythagorean triplet
+-----------------------------------
 Pythagorean triplets are sets of three naturals, a < b < c, for which, a^2 + b^2 = c^2
 (e.g. 32 + 42 = 9 + 16 = 25 = 52).
-Find the product(s) abc such that a + b + c = sum_value.
-"""
+Find the product(s) abc such that a + b + c = sum_value. """
 
 import math
 
