@@ -1,17 +1,15 @@
-"""
-Truncatable Primes
---------------------
+""" Truncatable Primes
+-------------------------
 3797 remains prime at each stage of having its digits continuously removed from 
 left to right and vice versa.
-Sum all the primes which are truncatable from left to right and vice versa.
-"""
+Sum all the primes which are truncatable from left to right and vice versa. """
 
 def _is_left_truncatable(n):
     """ smallest digit position. """
     mod = 10
     """ check if all truncated numbers are prime. """
     while mod < n:
-        if not _miller_rabin(n % mod): # see Python-Recreational-Mathematics/primality/miller_rabin.py
+        if not _miller_rabin(n % mod): # see Recreational-Algorithms/number_theory/miller_rabin.py
             return False
         """ iterate through digits from right to left by increasing mod by a 
         factor of 10. """
