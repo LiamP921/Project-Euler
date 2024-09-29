@@ -1,5 +1,4 @@
-"""
-Number Letter Counts
+""" Number Letter Counts
 ------------------------
 If the numbers 1 to 5 are written out: one, two, three, four, five, there are 3 + 3 + 5 
 + 4 + 4 = 19 total letters used.
@@ -7,8 +6,7 @@ Calculate how many letters would be used if all the numbers from 1 to limit incl
 were written out.
 Notes: Don't count spaces or hyphens (e.g. three hundred and forty-two and one hundred 
 and fifteen contain 23 and 20 letters). The use of "and" when writing out numbers is in 
-compliance with British usage.
-"""
+compliance with British usage. """
 
 def _count_word_length(num):
     if num < 10:
