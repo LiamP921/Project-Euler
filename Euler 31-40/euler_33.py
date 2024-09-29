@@ -1,13 +1,11 @@
-"""
-Digit Cancelling Fractions
+""" Digit Cancelling Fractions
 ---------------------------------
 One may incorrectly believe that 49/98 = 4/8 is obtained by cancelling the 9s. 
 Consider fractions like 30/50 = 3/5 to be trivial examples. There are four 
 non-trivial examples of this type of fraction, less than one in value and with two 
 digit numerators and denominators.
 
-If the product of these four is given in its lowest common terms, calculate the denominator.
-"""
+If the product of these four is given in its lowest common terms, calculate the denominator. """
 
 def digit_cancelling_fractions():
     product_numerator = 1
