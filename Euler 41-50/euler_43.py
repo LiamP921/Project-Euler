@@ -1,12 +1,10 @@
-"""
-Sub-String Divisibility
-------------------------
+""" Sub-String Divisibility
+-------------------------------
 With 1406357289, let d1 and d2 be the 1st and 2nd digit, and so on. In this way, note 
 the following: d2d3d4 = 406 is divisible by 2, d3d4d5 = 063 by 3, d4d5d6 = 635 by 5, 
 d5d6d7 = 357 by 7, d6d7d8=572 by 11, d7d8d9 = 728 by 13, d8d9d10 = 289 by 17.
 
-Sum all the 0-n pandigitals with sub-strings with this property.
-"""
+Sum all the 0-n pandigitals with sub-strings with this property. """
 
 def _sum_pandigitals(digits_left, current, current_length, primes):
     if len(digits_left) == 0:
