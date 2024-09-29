@@ -1,17 +1,14 @@
-"""
-Number Spiral Diagonals
---------------------------
+""" Number Spiral Diagonals
+-------------------------------
 Starting from 1 and moving to the right in a clockwise direction forms a 5 * 5 
 spiral: 21 22 23 24 25
         20  7  8  9 10
         19  6  1  2 11
         18  5  4  3 12
         17 16 15 14 13
-Sum the numbers on the diagonals in an n * n spiral formed in the same way.
-"""
+Sum the numbers on the diagonals in an n * n spiral formed in the same way. """
 
-"""
-1). As the corners are always at (1, 1), (1, n), (n, 1), and (n, n), they can be 
+""" 1). As the corners are always at (1, 1), (1, n), (n, 1), and (n, n), they can be 
 summed via 4 * (n - 1)^2. 
 
 2). The summation of separate diagonals can be thought of in two parts: the first has 
@@ -24,8 +21,7 @@ used to sum the first and second parts of the diagonal via (2 + (n // 2 - 1)(n -
 and (2n^2 - (n // 2 + 1)(n - 1)).
 
 4). The summation of both parts and all four corners can then be simplified into the 
-equation used in the function.
-"""
+equation used in the function. """
 
 def number_spiral_diagonals(n):
     return (4 * n ** 3 + 3 * n ** 2 + 8 * n - 9) // 6
