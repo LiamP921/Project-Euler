@@ -1,12 +1,9 @@
-"""
-Multiples of 3 or 5
------------------------
+""" Multiples of 3 or 5
+-----------------------------------
 3, 5, 6 and 9 are all the natural multiples of 3 or 5 < 10; these sum to 23.
-Find the sum of all the multiples of 3 or 5 < num.
-"""
+Find the sum of all the multiples of 3 or 5 < num. """
 
-"""
-1a). Gauss summation formula: n∑i=1 = (1/2)(n(n + 1)). Multiples of 3 are 
+""" 1a). Gauss summation formula: n∑i=1 = (1/2)(n(n + 1)). Multiples of 3 are 
 3,6,9,12... Placing 3 outside the brackets gives 3⋅(1,2,3,4,...). Thus, the 
 amount of numbers needed to be summated is [n/3]
 
@@ -15,8 +12,7 @@ amount of numbers needed to be summated is [n/3]
 
 2). σ(999,3) + σ(999,5) presents a problem: all numbers divisible by 3 and 5 are 
 counted twice. As lcm(5,3) = 15, all multiples of 15 must be subtracted: σ(999,3) 
-+ σ(999,5) − σ(999,15).
-"""
++ σ(999,5) − σ(999,15). """
 
 def multiples_of_3_or_5(n):
     r = (n - 1) // 3
