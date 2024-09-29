@@ -9,7 +9,7 @@ def nth_prime(n):
     precision, incorporate log(log(n)) to adjust for the increasing gap between 
     consecutive primes. """
     upper_bound = math.ceil(n * (math.log(n) + math.log(math.log(n))))
-    return sieve_of_eratosthenes(upper_bound)[n - 1] # see Python-Recreational-Algorithms/sieves_of_eratosthenes.py
+    return sieve_of_eratosthenes(upper_bound)[n - 1] # see Recreational-Algorithms/sieves_of_eratosthenes.py
 
 if __name__ == "__main__":
   print(nth_prime(10001))
