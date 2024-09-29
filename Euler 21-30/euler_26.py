@@ -1,6 +1,5 @@
-"""
-Reciprocal Cycles
---------------------
+""" Reciprocal Cycles
+--------------------------
 A unit fraction contains 1 in the numerator. The following are decimal representations 
 of the unit fractions with denominators 2-7:
 1/2 = 0.5, 1/3 = 0.(3), 1/4 = 0.25, 1/5 = 0.2, 1/6 = 0.1(6), 1/7 = 0.(142857)
@@ -24,14 +23,14 @@ def _carmichael(n):
     p = 3
     sqrt_n = math.isqrt(n)
 
-    """  iterate through odd numbers from 3 to sqrt(n), as if p is a prime divisor of 
+    """ iterate through odd numbers from 3 to sqrt(n), as if p is a prime divisor of 
     n, p ≤ n. """
     while p <= sqrt_n:
         """ if p divides n, update result by finding the LCM of the result and p - 1, 
         where p - 1 is the order of p mod n (i.e. the smallest positive integer k 
         such that p^k ≡ 1 mod n)."""
         if n % p == 0:
-            result = _lowest_common_multiple(result, p - 1) # see Python-Project-Euler/Euler 1-50/Euler 1-10/euler_5.py
+            result = _lowest_common_multiple(result, p - 1) # see Project-Euler/Euler 1-10/euler_5.py
             while n % p == 0:
                 """ divide n by p whilst it's still divisible, removing all 
                 occurrences of p from n. """
