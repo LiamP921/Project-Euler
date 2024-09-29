@@ -1,9 +1,7 @@
-"""
-Distinct Primes Factors
---------------------------
+""" Distinct Primes Factors
+-------------------------------
 The first two consecutive numbers to have two distinct prime factors are: 14 = 2 * 
-7, 15 = 3 × 5
-
+7, 15 = 3 * 5.
 Find the smallest of the first n consecutive integers to have k distinct prime 
 factors each. """
 
