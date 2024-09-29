@@ -1,6 +1,5 @@
-"""
-Consecutive Prime Sum
--------------------------
+""" Consecutive Prime Sum
+-----------------------------
 The longest sum of consecutive primes below one-thousand that adds to a 
 prime, contains 21 terms, and is equal to 953.
 
@@ -12,7 +11,7 @@ def _prime_sum_below_n(n):
     i = 2
     """ generate primes consecutively until their sum > n """
     while sum_primes + i <= n:
-        if _miller_rabin(i): # see Python-Recreational-Mathematics/primality/sieves/miller_rabin.py
+        if _miller_rabin(i): # see Recreational-Algorithms/number_theory/miller_rabin.py
             primes.append(i)
             sum_primes += i
         i += 1
