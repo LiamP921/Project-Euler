@@ -1,18 +1,14 @@
-"""
-Largest Prime Factor
------------------------
+""" Largest Prime Factor
+------------------------------------
 The prime factors of 13195 are 5, 7, 13 and 29.
-Find the largest prime factor of n.
-"""
+Find the largest prime factor of n. """
 
 import math
 
 def largest_prime_factor(n):
     i = 2
-    """
-     if there is a factor of n > sqrt(n), the other would be necessarily < sqrt(n),
-     and would have already been encountered.
-    """
+    """ if there is a factor of n > sqrt(n), the other would be 
+    necessarily < sqrt(n), and would have already been encountered. """
     while i <= math.sqrt(n):
         """
         remove the factor i from n
@@ -21,10 +17,8 @@ def largest_prime_factor(n):
             n //= i
         else:
             i += 1
-    """
-    n will be the largest prime factor, as it's continuously divided by its smallest
-    prime factors until it becomes prime.
-    """
+    """ n will be the largest prime factor, as it's continuously divided by 
+    its smallest prime factors until it becomes prime. """
     return n
 
 if __name__ == "__main__":
