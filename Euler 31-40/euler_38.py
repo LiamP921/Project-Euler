@@ -1,11 +1,8 @@
-"""
-Pandigital Multiples
------------------------
+""" Pandigital Multiples
+----------------------------
 192384576 represents the concatenated product of 192 and (1, 2, 3).
-
 Find the largest 1 to k pandigital k-digit number formable as the concatenated 
-product of an integer with (1, 2, ..., n) where n > 1, and 8 <= k <= 9. 
-"""
+product of an integer with (1, 2, ..., n) where n > 1, and 8 <= k <= 9. """
 
 def pandigital_multiples(k):
     digits = set("1234567890"[:k])
