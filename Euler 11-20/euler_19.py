@@ -1,6 +1,5 @@
-"""
-Counting Sundays
-------------------
+""" Counting Sundays
+---------------------------------
 1 Jan 1900 was a Monday. September, April, June and November all have thirty days. 
 All the rest have thirty-one, saving February alone, which has twenty-eight. And 
 on leap years, twenty-nine. A leap year occurs on any year evenly divisible by 4, 
