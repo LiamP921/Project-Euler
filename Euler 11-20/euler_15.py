@@ -1,6 +1,5 @@
-"""
-Lattice Paths
-----------------
+""" Lattice Paths
+-----------------------
 Starting in the top left corner of a 2×2 grid, and only being able to move 
 to the right and down, there are exactly 6 routes to the bottom right.
 Calculate how many such routes there are in an a * a grid.
@@ -14,8 +13,7 @@ on the grid, calculate the coefficient of (x + y)^2a.
 
 3). This is achieved by calculating the binomial coefficient (2a choose a) 
 via 2a! / (a! * (2a - a)!). This represents the number of ways to choose a items 
-(movements) from a total set of 2a.
-"""
+(movements) from a total set of 2a. """
 
 def _factorial(n):
     fac = 1
