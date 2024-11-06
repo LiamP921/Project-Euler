@@ -1,7 +1,7 @@
 # Project-Euler
 My solutions to Project Euler problems!
 
-## 1-10
+## Euler 1-10
 1. Multiples of 3 or 5
 2. Even Fibonacci Numbers
 3. Largest Prime Factor
@@ -13,7 +13,7 @@ My solutions to Project Euler problems!
 9. Special Pythagorean Triplet
 10. Summation of Primes	
 
-## 11-20
+## Euler 11-20
 11.	Largest Product in a Grid	
 12.	Highly Divisible Triangular Number	
 13.	Large Sum	
@@ -25,7 +25,7 @@ My solutions to Project Euler problems!
 19.	Counting Sundays
 20.	Factorial Digit Sum	
 
-## 21-30
+## Euler 21-30
 21.	Amicable Numbers	
 22.	Names Scores
 23.	Non-Abundant Sums	
@@ -37,7 +37,7 @@ My solutions to Project Euler problems!
 29.	Distinct Powers	
 30.	Digit Fifth Powers	
 
-## 31-40
+## Euler 31-40
 31.	Coin Sums	
 32.	Pandigital Products	
 33.	Digit Cancelling Fractions	
@@ -49,7 +49,7 @@ My solutions to Project Euler problems!
 39.	Integer Right Triangles	
 40.	Champernowne's Constant
 
-## 41-50
+## Euler 41-50
 41.	Pandigital Prime	
 42.	Coded Triangle Numbers	
 43.	Sub-string Divisibility	
