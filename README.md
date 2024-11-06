@@ -1,7 +1,7 @@
 # Project-Euler
-My solutions to the first 50 Project Euler problems!
+My solutions to Project Euler problems!
 
-## Euler 1-10
+## 1-10
 1. Multiples of 3 or 5
 2. Even Fibonacci Numbers
 3. Largest Prime Factor
@@ -25,7 +25,7 @@ My solutions to the first 50 Project Euler problems!
 19.	Counting Sundays
 20.	Factorial Digit Sum	
 
-## Euler 21-30
+## 21-30
 21.	Amicable Numbers	
 22.	Names Scores
 23.	Non-Abundant Sums	
@@ -37,7 +37,7 @@ My solutions to the first 50 Project Euler problems!
 29.	Distinct Powers	
 30.	Digit Fifth Powers	
 
-## Euler 31-40
+## 31-40
 31.	Coin Sums	
 32.	Pandigital Products	
 33.	Digit Cancelling Fractions	
@@ -49,7 +49,7 @@ My solutions to the first 50 Project Euler problems!
 39.	Integer Right Triangles	
 40.	Champernowne's Constant
 
-## Euler 41-50
+## 41-50
 41.	Pandigital Prime	
 42.	Coded Triangle Numbers	
 43.	Sub-string Divisibility	
