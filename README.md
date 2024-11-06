@@ -13,7 +13,7 @@ My solutions to Project Euler problems!
 9. Special Pythagorean Triplet
 10. Summation of Primes	
 
-## Euler 11-20
+## 11-20
 11.	Largest Product in a Grid	
 12.	Highly Divisible Triangular Number	
 13.	Large Sum	
